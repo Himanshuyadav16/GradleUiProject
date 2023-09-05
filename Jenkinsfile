@@ -1,14 +1,15 @@
 pipeline{
-     agent any
+     agent {
+        label "gradle"
+     }
+        tools{
+        gradle --version
+        }
         stages{
             stage('Java Version') {
                 steps {
-                    sh 'java --version'
-                }
-            }
-            stage('build'){
-                steps{
-           		    sh './gradlew clean test'
+                    sh "java --version"
+                    sh "gradle --version"
                 }
             }
        }
