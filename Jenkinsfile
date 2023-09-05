@@ -6,14 +6,9 @@ pipeline{
                     sh 'java --version'
                 }
             }
-            stage('Gradle version'){
-                steps {
-                    sh "gradle --version"
-                }
-            }
             stage('build'){
                 steps{
-           		    sh "gradle build"
+           		    sh "gradle clean test"
                 }
             }
        }
