@@ -8,12 +8,12 @@ pipeline{
             }
             stage('Gradle version'){
                 steps {
-                    sh './gradle --version'
+                    sh "gradle --version"
                 }
             }
             stage('build'){
                 steps{
-           		    sh './gradle build'
+           		    sh "gradle build"
                 }
             }
        }
