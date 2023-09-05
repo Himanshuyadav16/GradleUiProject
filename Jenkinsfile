@@ -1,7 +1,7 @@
 pipeline{
      agent {
         label "gradle"
-
+         }
         stages{
             stage('Java Version') {
                 steps {
