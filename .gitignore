@@ -2,7 +2,6 @@
 .gradle
 gradlew.bat
 gradlew
-build
 allure-results
 allure-report
 gradle
