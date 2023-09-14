@@ -4,7 +4,7 @@ pipeline{
             stage('Java And Gradle Version') {
                 steps {
                     sh 'java --version'
-                    sh './gradlew clean test'
+                    sh 'gradle clean test'
                 }
             }
        }
