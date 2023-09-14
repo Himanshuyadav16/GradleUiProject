@@ -1,10 +1,10 @@
 pipeline{
      agent any
         stages{
-            stage('Java Version') {
+            stage('Java And Gradle Version') {
                 steps {
                     sh 'java --version'
-                    sh './gradlew --version'
+                    sh 'gradle --version'
                 }
             }
        }
