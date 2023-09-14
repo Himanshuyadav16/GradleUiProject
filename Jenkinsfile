@@ -4,7 +4,14 @@ pipeline{
             stage('Java And Gradle Version') {
                 steps {
                     sh 'java --version'
-                    sh 'gradle clean test'
+                    sh './gradlew clean test'
+                     allure([
+                             includeProperties: false,
+                             jdk: '',
+                             properties: [],
+                                          reportBuildPolicy: 'ALWAYS',
+                                               results: [[path: 'allure-results']]
+                                           ])
                 }
             }
        }
